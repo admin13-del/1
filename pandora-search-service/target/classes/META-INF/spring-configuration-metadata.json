@@ -1,0 +1,87 @@
+{
+  "groups": [
+    {
+      "name": "loadbalance.onlinesortingservers",
+      "type": "com.migu.pandora.search.music.web.loadbalance.LoadBalancerProperties",
+      "sourceType": "com.migu.pandora.search.music.web.loadbalance.LoadBalancerProperties"
+    },
+    {
+      "name": "lvs.big-net",
+      "type": "com.migu.pandora.search.music.web.loadbalance.LvsBigNetProperties",
+      "sourceType": "com.migu.pandora.search.music.web.loadbalance.LvsBigNetProperties"
+    },
+    {
+      "name": "lvs.embedding",
+      "type": "com.migu.pandora.search.music.web.loadbalance.LvsEmbeddingProperties",
+      "sourceType": "com.migu.pandora.search.music.web.loadbalance.LvsEmbeddingProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "loadbalance.onlinesortingservers.connecttimeout",
+      "type": "java.lang.Integer",
+      "sourceType": "com.migu.pandora.search.music.web.loadbalance.LoadBalancerProperties"
+    },
+    {
+      "name": "loadbalance.onlinesortingservers.readtimeout",
+      "type": "java.lang.Integer",
+      "sourceType": "com.migu.pandora.search.music.web.loadbalance.LoadBalancerProperties"
+    },
+    {
+      "name": "loadbalance.onlinesortingservers.writetimeout",
+      "type": "java.lang.Integer",
+      "sourceType": "com.migu.pandora.search.music.web.loadbalance.LoadBalancerProperties"
+    },
+    {
+      "name": "lvs.big-net.connecttimeout",
+      "type": "java.lang.Integer",
+      "sourceType": "com.migu.pandora.search.music.web.loadbalance.LvsBigNetProperties"
+    },
+    {
+      "name": "lvs.big-net.readtimeout",
+      "type": "java.lang.Integer",
+      "sourceType": "com.migu.pandora.search.music.web.loadbalance.LvsBigNetProperties"
+    },
+    {
+      "name": "lvs.big-net.ssl-ca-file",
+      "type": "java.lang.String",
+      "sourceType": "com.migu.pandora.search.music.web.loadbalance.LvsBigNetProperties"
+    },
+    {
+      "name": "lvs.big-net.ssl-cert-file",
+      "type": "java.lang.String",
+      "sourceType": "com.migu.pandora.search.music.web.loadbalance.LvsBigNetProperties"
+    },
+    {
+      "name": "lvs.big-net.ssl-key-file",
+      "type": "java.lang.String",
+      "sourceType": "com.migu.pandora.search.music.web.loadbalance.LvsBigNetProperties"
+    },
+    {
+      "name": "lvs.big-net.verify-host",
+      "type": "java.lang.String",
+      "sourceType": "com.migu.pandora.search.music.web.loadbalance.LvsBigNetProperties"
+    },
+    {
+      "name": "lvs.big-net.writetimeout",
+      "type": "java.lang.Integer",
+      "sourceType": "com.migu.pandora.search.music.web.loadbalance.LvsBigNetProperties"
+    },
+    {
+      "name": "lvs.embedding.connecttimeout",
+      "type": "java.lang.Integer",
+      "sourceType": "com.migu.pandora.search.music.web.loadbalance.LvsEmbeddingProperties"
+    },
+    {
+      "name": "lvs.embedding.readtimeout",
+      "type": "java.lang.Integer",
+      "sourceType": "com.migu.pandora.search.music.web.loadbalance.LvsEmbeddingProperties"
+    },
+    {
+      "name": "lvs.embedding.writetimeout",
+      "type": "java.lang.Integer",
+      "sourceType": "com.migu.pandora.search.music.web.loadbalance.LvsEmbeddingProperties"
+    }
+  ],
+  "hints": []
+}
