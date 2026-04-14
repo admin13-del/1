@@ -1,0 +1,63 @@
+<configuration scan="true" debug="false">
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoder 默认配置为PatternLayoutEncoder -->
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="search" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/common.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+            <fileNamePattern>logs/log.%i.zip</fileNamePattern>
+            <minIndex>1</minIndex>
+            <maxIndex>20</maxIndex>
+        </rollingPolicy>
+
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <maxFileSize>10MB</maxFileSize>
+        </triggeringPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-4relative [%thread] %-5level %logger{35}:%line %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+
+    <appender name="searchResult" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/result.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+            <fileNamePattern>logs/result.%i.zip</fileNamePattern>
+            <minIndex>1</minIndex>
+            <maxIndex>20</maxIndex>
+        </rollingPolicy>
+
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <maxFileSize>10MB</maxFileSize>
+        </triggeringPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-4relative [%thread] %-5level %logger{35}:%line %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+
+    <logger name="com.migu.pandora.search_result" additivity="false">
+        <level value="info"/>
+        <appender-ref ref="searchResult"/>
+    </logger>
+
+
+    <logger name="com.migu.pandora.search" additivity="false">
+        <level value="debug"/>
+        <appender-ref ref="search"/>
+    </logger>
+
+
+    <root>
+        <level value="warn"/>
+        <appender-ref ref="search"/>
+    </root>
+
+</configuration>
